@@ -6,6 +6,7 @@
     "description"  : "Subsets for various types of IO::Path instances",
     "tags"         : [ "IO" ],
     "depends"      : [
+        "Subset::Helper"
     ],
     "test-depends" : [
         "Testo",
