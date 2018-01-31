@@ -77,6 +77,14 @@ Path must be an existing, readable file.
 
 Path must be an existing, readable and writable file.
 
+## `IO::Path::frx`
+
+Path must be an existing, readable and executable file.
+
+## `IO::Path::fwx`
+
+Path must be an existing, writeable and executable file.
+
 ## `IO::Path::frwx`
 
 Path must be an existing, readable, writable, and executable file.
@@ -88,6 +96,14 @@ Path must be an existing, readable directory.
 ## `IO::Path::drw`
 
 Path must be an existing, readable and writable directory.
+
+## `IO::Path::drx`
+
+Path must be an existing, readable and executable directory.
+
+## `IO::Path::dwx`
+
+Path must be an existing, writeable and executable directory.
 
 ## `IO::Path::drwx`
 

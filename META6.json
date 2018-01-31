@@ -2,7 +2,7 @@
     "perl"         : "6.c",
     "name"         : "Subsets::IO",
     "license"      : "Artistic-2.0",
-    "version"      : "1.001001",
+    "version"      : "1.001002",
     "description"  : "Subsets for various types of IO::Path instances",
     "tags"         : [ "IO" ],
     "depends"      : [
@@ -13,7 +13,7 @@
         "Temp::Path"
     ],
     "provides"     : {
-
+        "Subsets::IO": "lib/Subsets/IO.pm6"
     },
     "authors"       : ["Zoffix Znet"],
     "support"       : {"source" : "https://github.com/zoffixznet/perl6-Subsets-IO.git"}
