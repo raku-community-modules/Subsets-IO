@@ -1,5 +1,5 @@
-use lib <lib ../lib>;
+use lib <lib>;
 use Subsets::IO;
 
-say $?FILE.IO ~~ IO::Path::e;
--> IO::Path::e {}($?FILE.IO.add: "meow");
+say $?FILE.IO ~~ Path::e;
+# -> Path::e {}($?FILE.IO.add: "meow");
