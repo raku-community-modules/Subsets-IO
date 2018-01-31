@@ -40,7 +40,7 @@ of the subsets you want to import only those subsets. For example, to import
 only `IO::Path::E` and `IO::Path::frw`, use:
 
 ```perl-6
-    use Subsets::IO :E, :FRW;
+    use Subsets::IO :E, :frw;
 ```
 
 # AVAILABLE SUBSETS
