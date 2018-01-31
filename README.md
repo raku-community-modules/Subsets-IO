@@ -123,7 +123,7 @@ are currently exported all the time, even if specific tags are specified.
     submit a PR to
     [`Subset::Helper`](https://modules.perl6.org/dist/Subset::Helper)
 
-----
+-----
 
 #### REPOSITORY
 
