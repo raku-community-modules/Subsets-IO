@@ -128,12 +128,12 @@ are currently exported all the time, even if specific tags are specified.
 #### REPOSITORY
 
 Fork this module on GitHub:
-https://github.com/zoffixznet/perl6-Subsets-IO
+https://github.com/raku-community-modules/Subsets-IO
 
 #### BUGS
 
 To report bugs or request features, please use
-https://github.com/zoffixznet/perl6-Subsets-IO/issues
+https://github.com/raku-community-modules/Subsets-IO/issues
 
 #### AUTHOR
 
