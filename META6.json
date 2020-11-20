@@ -16,5 +16,5 @@
         "Subsets::IO": "lib/Subsets/IO.pm6"
     },
     "authors"       : ["Zoffix Znet"],
-    "support"       : {"source" : "https://github.com/zoffixznet/perl6-Subsets-IO.git"}
+    "support"       : {"source" : "https://github.com/raku-community-modules/Subsets-IO.git"}
 }
