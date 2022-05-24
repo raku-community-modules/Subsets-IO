@@ -1,6 +1,8 @@
 Revision history for Subsets-IO
 
 {{$NEXT}}
+
+1.1  2022-05-24T12:51:01+02:00
     - Initial version in zef ecosystem.
     - Added support for "will complain" trait on compiler versions
       that support it.
