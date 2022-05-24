@@ -1,0 +1,8 @@
+Revision history for Subsets-IO
+
+{{$NEXT}}
+    - Initial version in zef ecosystem.
+    - Added support for "will complain" trait on compiler versions
+      that support it.
+    - Removed mention of partial export, since that never worked and
+      also never will.

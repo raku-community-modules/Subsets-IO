@@ -1,20 +1,22 @@
-[![Build Status](https://travis-ci.org/zoffixznet/perl6-Subsets-IO.svg)](https://travis-ci.org/zoffixznet/perl6-Subsets-IO)
+[![Actions Status](https://github.com/raku-community-modules/Subsets-IO/actions/workflows/test.yml/badge.svg)](https://github.com/raku-community-modules/Subsets-IO/actions)
 
-# NAME
+NAME
+====
 
 `Subsets::IO` - Subsets for various types of `IO::Path` instances
 
-# SYNOPSIS
+SYNOPSIS
+========
 
-```perl-6
-use Subsets::IO :frw;
+```raku
+use Subsets::IO;
 
 say "Our script is writable and readable"
     if $?FILE.IO ~~ IO::Path::frw;
 ```
 
-```perl-6
-use Subsets::IO; # export all available subsets
+```raku
+use Subsets::IO;
 
 sub make-conf($conf where IO::Path::dw | IO::Path::fw) {
     say "$conf is either a writable directory or a writable file";
@@ -29,121 +31,105 @@ make-conf-file $?FILE.IO;
 #   expected IO::Path::E but got IO::Path (IO::Path.new("/home/z...)
 ```
 
-# DESCRIPTION
+DESCRIPTION
+===========
 
-The module provides subsets of
-[`IO::Path:D`](https://docs.perl6.org/type/IO::Path) that additionally perform
-file tests and use
-[`Subset::Helper`](https://modules.perl6.org/dist/Subset::Helper) to dispay
-useful error messages on typecheck failure.
+The module provides subsets of [`IO::Path:D`](https://docs.raku.org/type/IO::Path) that additionally perform file tests and either uses the new `will complain` (since Rakudo 2022.04) feature, or uses [`Subset::Helper`](https://raku.land/zef:raku-community-modules/Subset::Helper) to display useful error messages on typecheck failures.
 
-# IMPORTING
+AVAILABLE SUBSETS
+=================
 
-By default, all subsets are imported. You can specify tags that match the name
-of the subsets you want to import only those subsets. For example, to import
-only `IO::Path::E` and `IO::Path::frw`, use:
-
-```perl-6
-    use Subsets::IO :E, :frw;
-```
-
-# AVAILABLE SUBSETS
-
-## `IO::Path::e`
+IO::Path::e`
+------------
 
 Path must exist.
 
-## `IO::Path::E`
+IO::Path::E`
+------------
 
 Path must NOT exist.
 
-## `IO::Path::f`
+IO::Path::f`
+------------
 
 Path must be an existing file.
 
-## `IO::Path::F`
+IO::Path::F`
+------------
 
 Path must NOT be an existing file.
 
-## `IO::Path::d`
+IO::Path::d`
+------------
 
 Path must be an existing directory.
 
-## `IO::Path::D`
+IO::Path::D`
+------------
 
 Path must NOT be an existing directory.
 
-## `IO::Path::fr`
+IO::Path::fr`
+-------------
 
 Path must be an existing, readable file.
 
-## `IO::Path::frw`
+IO::Path::frw`
+--------------
 
 Path must be an existing, readable and writable file.
 
-## `IO::Path::frx`
+IO::Path::frx`
+--------------
 
 Path must be an existing, readable and executable file.
 
-## `IO::Path::fwx`
+IO::Path::fwx`
+--------------
 
 Path must be an existing, writeable and executable file.
 
-## `IO::Path::frwx`
+IO::Path::frwx`
+---------------
 
 Path must be an existing, readable, writable, and executable file.
 
-## `IO::Path::dr`
+IO::Path::dr`
+-------------
 
 Path must be an existing, readable directory.
 
-## `IO::Path::drw`
+IO::Path::drw`
+--------------
 
 Path must be an existing, readable and writable directory.
 
-## `IO::Path::drx`
+IO::Path::drx`
+--------------
 
 Path must be an existing, readable and executable directory.
 
-## `IO::Path::dwx`
+IO::Path::dwx`
+--------------
 
 Path must be an existing, writeable and executable directory.
 
-## `IO::Path::drwx`
+IO::Path::drwx`
+---------------
 
 Path must be an existing, readable, writable, and executable directory.
 
-# BUGS AND LIMITATIONS
+AUTHOR
+======
 
-* Due to [R#1458](https://github.com/rakudo/rakudo/issues/1458), all symbols
-are currently exported all the time, even if specific tags are specified.
+Zoffix Znet
 
-* On typecheck failure, the error message is printed twice, due to how Rakudo's
-    fast and slow-path binding works. If you know a good solution to that,
-    submit a PR to
-    [`Subset::Helper`](https://modules.perl6.org/dist/Subset::Helper)
+COPYRIGHT AND LICENSE
+=====================
 
------
+Copyright 2018 Zoffix Znet
 
-#### REPOSITORY
+Copyright 2019 - 2022 Raku Community
 
-Fork this module on GitHub:
-https://github.com/raku-community-modules/Subsets-IO
+This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
-#### BUGS
-
-To report bugs or request features, please use
-https://github.com/raku-community-modules/Subsets-IO/issues
-
-#### AUTHOR
-
-Zoffix Znet (http://perl6.party/)
-
-#### LICENSE
-
-You can use and distribute this module under the terms of the
-The Artistic License 2.0. See the `LICENSE` file included in this
-distribution for complete details.
-
-The `META6.json` file of this distribution may be distributed and modified
-without restrictions or attribution.

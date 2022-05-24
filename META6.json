@@ -1,20 +1,33 @@
 {
-    "perl"         : "6.c",
-    "name"         : "Subsets::IO",
-    "license"      : "Artistic-2.0",
-    "version"      : "1.001003",
-    "description"  : "Subsets for various types of IO::Path instances",
-    "tags"         : [ "IO" ],
-    "depends"      : [
-        "Subset::Helper"
-    ],
-    "test-depends" : [
-        "Testo",
-        "Temp::Path"
-    ],
-    "provides"     : {
-        "Subsets::IO": "lib/Subsets/IO.pm6"
-    },
-    "authors"       : ["Zoffix Znet"],
-    "support"       : {"source" : "https://github.com/raku-community-modules/Subsets-IO.git"}
+  "auth": "zef:raku-community-modules",
+  "authors": [
+    "Zoffix Znet"
+  ],
+  "build-depends": [
+  ],
+  "depends": [
+    "Subset::Helper"
+  ],
+  "description": "Subsets for various types of `IO::Path` instances",
+  "license": "Artistic-2.0",
+  "name": "Subsets::IO",
+  "perl": "6.c",
+  "provides": {
+    "Subsets::IO": "lib/Subsets/IO.rakumod",
+    "Subsets::IO-helper": "lib/Subsets/IO-helper.rakumod"
+  },
+  "resources": [
+  ],
+  "source-url": "https://github.com/raku-community-modules/Subsets-IO.git",
+  "support": {
+    "source": "https://github.com/raku-community-modules/Subsets-IO.git"
+  },
+  "tags": [
+    "IO"
+  ],
+  "test-depends": [
+    "Testo",
+    "Temp::Path"
+  ],
+  "version": "1.1"
 }

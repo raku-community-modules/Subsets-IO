@@ -1,4 +1,3 @@
-use lib <lib>;
 use Temp::Path;
 use Testo;
 use Subsets::IO;
@@ -80,3 +79,5 @@ $d.chmod: 0o777;
 is $d, IO::Path::drwx, ':drwx';
 $d.chmod: 0o000;
 is $d !~~ IO::Path::drwx, *.so, ':drwx (false)';
+
+# vim: expandtab shiftwidth=4
