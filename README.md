@@ -39,83 +39,83 @@ The module provides subsets of [`IO::Path:D`](https://docs.raku.org/type/IO::Pat
 AVAILABLE SUBSETS
 =================
 
-IO::Path::e`
-------------
+IO::Path::e
+-----------
 
 Path must exist.
 
-IO::Path::E`
-------------
+IO::Path::E
+-----------
 
 Path must NOT exist.
 
-IO::Path::f`
-------------
+IO::Path::f
+-----------
 
 Path must be an existing file.
 
-IO::Path::F`
-------------
+IO::Path::F
+-----------
 
 Path must NOT be an existing file.
 
-IO::Path::d`
-------------
+IO::Path::d
+-----------
 
 Path must be an existing directory.
 
-IO::Path::D`
-------------
+IO::Path::D
+-----------
 
 Path must NOT be an existing directory.
 
-IO::Path::fr`
--------------
+IO::Path::fr
+------------
 
 Path must be an existing, readable file.
 
-IO::Path::frw`
---------------
+IO::Path::frw
+-------------
 
 Path must be an existing, readable and writable file.
 
-IO::Path::frx`
---------------
+IO::Path::frx
+-------------
 
 Path must be an existing, readable and executable file.
 
-IO::Path::fwx`
---------------
+IO::Path::fwx
+-------------
 
 Path must be an existing, writeable and executable file.
 
-IO::Path::frwx`
----------------
+IO::Path::frwx
+--------------
 
 Path must be an existing, readable, writable, and executable file.
 
-IO::Path::dr`
--------------
+IO::Path::dr
+------------
 
 Path must be an existing, readable directory.
 
-IO::Path::drw`
---------------
+IO::Path::drw
+-------------
 
 Path must be an existing, readable and writable directory.
 
-IO::Path::drx`
---------------
+IO::Path::drx
+-------------
 
 Path must be an existing, readable and executable directory.
 
-IO::Path::dwx`
---------------
+IO::Path::dwx
+-------------
 
 Path must be an existing, writeable and executable directory.
 
-IO::Path::drwx`
----------------
+IO::Path::drwx
+--------------
 
 Path must be an existing, readable, writable, and executable directory.
 

@@ -135,67 +135,67 @@ to display useful error messages on typecheck failures.
 
 =head1 AVAILABLE SUBSETS
 
-=head2 IO::Path::e`
+=head2 IO::Path::e
 
 Path must exist.
 
-=head2 IO::Path::E`
+=head2 IO::Path::E
 
 Path must NOT exist.
 
-=head2 IO::Path::f`
+=head2 IO::Path::f
 
 Path must be an existing file.
 
-=head2 IO::Path::F`
+=head2 IO::Path::F
 
 Path must NOT be an existing file.
 
-=head2 IO::Path::d`
+=head2 IO::Path::d
 
 Path must be an existing directory.
 
-=head2 IO::Path::D`
+=head2 IO::Path::D
 
 Path must NOT be an existing directory.
 
-=head2 IO::Path::fr`
+=head2 IO::Path::fr
 
 Path must be an existing, readable file.
 
-=head2 IO::Path::frw`
+=head2 IO::Path::frw
 
 Path must be an existing, readable and writable file.
 
-=head2 IO::Path::frx`
+=head2 IO::Path::frx
 
 Path must be an existing, readable and executable file.
 
-=head2 IO::Path::fwx`
+=head2 IO::Path::fwx
 
 Path must be an existing, writeable and executable file.
 
-=head2 IO::Path::frwx`
+=head2 IO::Path::frwx
 
 Path must be an existing, readable, writable, and executable file.
 
-=head2 IO::Path::dr`
+=head2 IO::Path::dr
 
 Path must be an existing, readable directory.
 
-=head2 IO::Path::drw`
+=head2 IO::Path::drw
 
 Path must be an existing, readable and writable directory.
 
-=head2 IO::Path::drx`
+=head2 IO::Path::drx
 
 Path must be an existing, readable and executable directory.
 
-=head2 IO::Path::dwx`
+=head2 IO::Path::dwx
 
 Path must be an existing, writeable and executable directory.
 
-=head2 IO::Path::drwx`
+=head2 IO::Path::drwx
 
 Path must be an existing, readable, writable, and executable directory.
 
