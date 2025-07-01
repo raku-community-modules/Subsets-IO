@@ -102,7 +102,7 @@ NEW
 use Subsets::IO;
 
 say "Our script is writable and readable"
-    if $?FILE.IO ~~ IO::Path::frw;
+    if $*PROGRAM ~~ IO::Path::frw;
 
 =end code
 
@@ -117,7 +117,7 @@ sub make-conf($conf where IO::Path::dw | IO::Path::fw) {
 sub make-conf-file(IO::Path::E $conf) {
     say "$conf is a non-existent path";
 }
-make-conf-file $?FILE.IO;
+make-conf-file $*PROGRAM;
 # Path must NOT exist Got /home/zoffix/CPANPRC/Subsets-IO/foo.p6
 # Constraint type check failed in binding to parameter '$conf';
 #   expected IO::Path::E but got IO::Path (IO::Path.new("/home/z...)
