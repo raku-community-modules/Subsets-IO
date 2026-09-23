@@ -6,15 +6,13 @@
   "build-depends": [
   ],
   "depends": [
-    "Subset::Helper"
   ],
   "description": "Subsets for various types of `IO::Path` instances",
   "license": "Artistic-2.0",
   "name": "Subsets::IO",
   "perl": "6.c",
   "provides": {
-    "Subsets::IO": "lib/Subsets/IO.rakumod",
-    "Subsets::IO-helper": "lib/Subsets/IO-helper.rakumod"
+    "Subsets::IO": "lib/Subsets/IO.rakumod"
   },
   "resources": [
   ],
@@ -29,5 +27,5 @@
     "Testo",
     "Temp::Path"
   ],
-  "version": "1.1"
+  "version": "1.2"
 }

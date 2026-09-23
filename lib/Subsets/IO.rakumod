@@ -1,38 +1,8 @@
-# NOTE: Before release 2022.04, there was no "will complain" trait for
-# subsets.  So in those cases we revert to the original code based on
-# the original Subset::Helper module.  Since the code with "will complain"
-# does not compile on the older versions, we need to only compile that
-# if we can with an EVAL.  However, this exposed issues in pre-compilation.
-# So the setting up of a lexical version of the "will complain" trait
-# is always compiled for all versions of Rakudo, but in such a way that it
-# is a runtime decision to actually call the "will complain" trait.
-#
-# Sadly, the old code could not be made part of an EVAL (probably for
-# similar reasons), so it has been extracted into a separate file that
-# is required conditionally.  Since both versions of the code just put
-# their subsets into the IO::Path stash, we don't need to worry about
-# the lexicality of the "require" or the EVAL.  This could be considered
-# a feature in these circumstances.
+# Each subset is a file test over IO::Path:D with a `will complain`
+# message shown on a typecheck failure. A `my subset IO::Path::e`
+# declaration installs the subset into the IO::Path stash.
+use experimental :will-complain;
 
-# Workaround for https://github.com/rakudo/rakudo/issues/4933
-use experimental;
-my constant $original-will = &trait_mod:<will>;
-my constant $complainer = ::("EXPORT").WHO<will-complain>:exists
-  ?? ::("EXPORT").WHO<will-complain>
-  !! Nil;
-
-my sub trait_mod:<will>(|c) {
-    c<complain> && !($complainer =:= Nil)
-      ?? $complainer.WHO<&trait_mod:<will>>(|c)
-      !! $original-will(|c)
-}
-
-if Compiler.new.version < v2022.04 {
-    require Subsets::IO-helper;
-}
-else {
-    Q:to/NEW/.EVAL;
-#--------------------------------------------------------------------------------
 my subset IO::Path::e of IO::Path:D
   will complain { 'Path must exist' }
   where *.e;
@@ -85,9 +55,6 @@ my subset IO::Path::dwx of IO::Path:D
 my subset IO::Path::drwx of IO::Path:D
   will complain { 'Path must be an existing, readable, writable, and executable directory' }
   where {.d and .rwx};
-NEW
-#--------------------------------------------------------------------------------
-}
 
 =begin pod
 
@@ -128,10 +95,8 @@ make-conf-file $*PROGRAM;
 
 The module provides subsets of
 L<C<IO::Path:D>|https://docs.raku.org/type/IO::Path> that additionally perform
-file tests and either uses the new C<will complain> (since Rakudo 2022.04)
-feature, or uses
-L<C<Subset::Helper>|https://raku.land/zef:raku-community-modules/Subset::Helper>
-to display useful error messages on typecheck failures.
+file tests, using the C<will complain> feature to display useful error
+messages on typecheck failures.
 
 =head1 AVAILABLE SUBSETS
 
