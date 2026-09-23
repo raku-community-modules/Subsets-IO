@@ -1,6 +1,11 @@
 Revision history for Subsets-IO
 
 {{$NEXT}}
+    - Fix issue in RakuAST (ugexe++)
+    - Modernize META and documentation
+    - Add full coverage
+    - Add CI badge for each OS
+    - Update copyright year
 
 1.1  2022-05-24T12:51:01+02:00
     - Initial version in zef ecosystem.

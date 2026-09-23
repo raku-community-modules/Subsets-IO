@@ -1,2 +1,3 @@
-.precomp
-
+.precomp/
+/Subsets-IO-*
+*.rakucov

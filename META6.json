@@ -5,27 +5,35 @@
   ],
   "build-depends": [
   ],
-  "depends": [
-  ],
+  "depends": {
+    "test": {
+      "requires": [
+        [
+          "Testo",
+          "Temp::Path"
+        ]
+      ]
+    }
+  },
   "description": "Subsets for various types of `IO::Path` instances",
   "license": "Artistic-2.0",
   "name": "Subsets::IO",
-  "perl": "6.c",
   "provides": {
     "Subsets::IO": "lib/Subsets/IO.rakumod"
   },
+  "raku": "6.c",
   "resources": [
   ],
   "source-url": "https://github.com/raku-community-modules/Subsets-IO.git",
   "support": {
+    "bugtracker": "https://github.com/raku-community-modules/Subsets-IO/issues",
+    "email": "community@raku.org",
     "source": "https://github.com/raku-community-modules/Subsets-IO.git"
   },
   "tags": [
     "IO"
   ],
   "test-depends": [
-    "Testo",
-    "Temp::Path"
   ],
   "version": "1.2"
 }
