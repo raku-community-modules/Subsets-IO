@@ -1,9 +1,9 @@
-[![Actions Status](https://github.com/raku-community-modules/Subsets-IO/actions/workflows/test.yml/badge.svg)](https://github.com/raku-community-modules/Subsets-IO/actions)
+[![Actions Status](https://github.com/raku-community-modules/Subsets-IO/actions/workflows/linux.yml/badge.svg)](https://github.com/raku-community-modules/Subsets-IO/actions) [![Actions Status](https://github.com/raku-community-modules/Subsets-IO/actions/workflows/macos.yml/badge.svg)](https://github.com/raku-community-modules/Subsets-IO/actions) [![Actions Status](https://github.com/raku-community-modules/Subsets-IO/actions/workflows/windows.yml/badge.svg)](https://github.com/raku-community-modules/Subsets-IO/actions)
 
 NAME
 ====
 
-`Subsets::IO` - Subsets for various types of `IO::Path` instances
+Subsets::IO` - Subsets for various types of `IO::Path` instances
 
 SYNOPSIS
 ========
@@ -12,7 +12,7 @@ SYNOPSIS
 use Subsets::IO;
 
 say "Our script is writable and readable"
-    if $?FILE.IO ~~ IO::Path::frw;
+    if $*PROGRAM ~~ IO::Path::frw;
 ```
 
 ```raku
@@ -25,7 +25,7 @@ sub make-conf($conf where IO::Path::dw | IO::Path::fw) {
 sub make-conf-file(IO::Path::E $conf) {
     say "$conf is a non-existent path";
 }
-make-conf-file $?FILE.IO;
+make-conf-file $*PROGRAM;
 # Path must NOT exist Got /home/zoffix/CPANPRC/Subsets-IO/foo.p6
 # Constraint type check failed in binding to parameter '$conf';
 #   expected IO::Path::E but got IO::Path (IO::Path.new("/home/z...)
@@ -34,7 +34,7 @@ make-conf-file $?FILE.IO;
 DESCRIPTION
 ===========
 
-The module provides subsets of [`IO::Path:D`](https://docs.raku.org/type/IO::Path) that additionally perform file tests and either uses the new `will complain` (since Rakudo 2022.04) feature, or uses [`Subset::Helper`](https://raku.land/zef:raku-community-modules/Subset::Helper) to display useful error messages on typecheck failures.
+The `Subsets::IO` distribution provides subsets of [`IO::Path:D`](https://docs.raku.org/type/IO::Path) that additionally perform file tests, using the `will complain` feature to display useful error messages on typecheck failures.
 
 AVAILABLE SUBSETS
 =================
@@ -129,7 +129,7 @@ COPYRIGHT AND LICENSE
 
 Copyright 2018 Zoffix Znet
 
-Copyright 2019 - 2022 Raku Community
+Copyright 2019 - 2022, 2025, 2026 Raku Community
 
 This library is free software; you can redistribute it and/or modify it under the Artistic License 2.0.
 
